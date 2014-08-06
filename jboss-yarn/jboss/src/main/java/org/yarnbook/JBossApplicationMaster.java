@@ -114,7 +114,7 @@ public class JBossApplicationMaster {
 	private volatile boolean done;
 	private volatile boolean success;
 
-	private List<Thread> launchThreads = new ArrayList<Thread>();
+	private List<Thread> launchThreads = new CopyOnWriteArrayList<Thread>();
 
 	/**
 	 * @param args
